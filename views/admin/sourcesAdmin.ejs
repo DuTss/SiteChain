@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+<div class="section">
+    <div class="columns">
+        <aside class="column is-2">
+            <p class="menu-label">Administration</p>
+            <ul class="menu-list">
+                <li><a href="/admin">Liste des articles</a></li>
+                <li><a href="/admin/sourcesAdmin">Liste des auteurs</a></li>
+            </ul>
+        </aside>
+
+
+        <div class="container containerSources">
+            <h1>LES <%= total %> SOURCES</h1>
+            <div class="columns">
+                <% sources.forEach(function(source) {%>
+                <div class="column">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Nom de la source : </strong><%= source.nomSource %></h5>
+                            <p class="card-text"><strong>URL : </strong><%= source.urlSource %></p>
+                        </div>
+                    </div>
+                </div>
+                <%});%>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

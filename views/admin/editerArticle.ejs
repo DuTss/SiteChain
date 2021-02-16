@@ -1,0 +1,47 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+<aside class="column is-2">
+    <p class="menu-label">Administration</p>
+    <ul class="menu-list">
+        <li><a href="/admin">Liste des articles</a></li>
+        <li><a href="/admin/sourcesAdmin">Liste des auteurs</a></li>
+    </ul>
+</aside>
+
+<div class="container add">
+    <h1>Modifie cette article</h1>
+    <form action="/admin/editer-article/<%= article.articleId %>?_method=PUT" method="POST">
+        <div class="field">
+            <label class="label">Titre</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Inscris un titre" name="titre" value="<%=article.titre%>">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Textarea" name="description"><%=article.description%></textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Choisis une source</label>
+            <div class="control">
+                <div class="select">
+                    <select name="sourceId">
+                        <option>Choisis une source</option>
+                        <% sources.forEach(function(source) {%>
+                        <option value="<%= source.sourceId %>"><%= source.nomSource %></option>
+                        <%});%>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control"><button class="button is-link">Ajouter</button></div>
+        </div>
+    </form>
+</div>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,74 @@
+@import url('component/navbar.css');
+@import url('component/404.css');
+@import url('component/footer.css');
+@import url('admin.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightskyblue;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: larger;
+}
+
+.section {
+  padding: 10px;
+}
+
+.intro {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card {
+  padding: 5px;
+  height: auto;
+}
+
+.card-content {
+  padding: 5px;
+}
+
+.card img {
+  border-radius: 2px;
+}
+
+
+.containerAdmin, .containerSources {
+  margin: 0;
+}
+
+nav i {
+  margin-right: 5px;
+}
+
+.add {
+  position: relative;
+  bottom: 100px;
+}
+
+.source {
+  margin-top: 5px;
+}
+
+.fa-phone,.fa-users {
+  margin-left: 5px;
+}
+
+.nav-search {
+  margin-left: 10px;
+  width: 330px;
+}

@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<div class="container">
+  <h1>LES AUTEURS</h1>
+  <% sources.forEach(function(source) {%>    
+  <div class="column">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Nom de la source : </strong><%= source.nomSource %></h5>
+          <p class="card-text"><strong>URL : </strong><%= source.urlSource %></p>
+        </div>
+      </div>      
+  </div>
+  <%});%>
+</div>
+<%- include('partials/footer.ejs') %>
